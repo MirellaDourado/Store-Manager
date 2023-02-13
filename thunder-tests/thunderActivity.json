@@ -1,0 +1,96 @@
+[
+  {
+    "_id": "845686ff-1da0-4d50-a629-58d1298f501b",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/",
+    "url": "http://localhost:3000/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-02-13T21:35:58.551Z",
+    "modified": "2023-02-13T21:35:58.551Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8f5211d9-b8ff-470f-b8e1-c8f81b25d691",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/product",
+    "url": "http://localhost:3000/product",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-02-13T21:36:03.247Z",
+    "modified": "2023-02-13T21:36:03.247Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "dce7b08b-e70a-4315-b25a-19148a26de92",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/product/",
+    "url": "http://localhost:3000/product/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-02-13T21:36:07.518Z",
+    "modified": "2023-02-13T21:36:07.518Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "b862afcf-52cf-4d82-8e9c-314e92958531",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products/",
+    "url": "http://localhost:3000/products/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-02-13T21:36:47.988Z",
+    "modified": "2023-02-13T21:37:29.859Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c0e9cb8e-6983-4a06-a223-59efe5b4be2a",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products/2",
+    "url": "http://localhost:3000/products/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-02-13T21:36:56.557Z",
+    "modified": "2023-02-13T21:36:56.557Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "cddf1f84-fcf8-4f91-8fee-306a804d4202",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products/",
+    "url": "http://localhost:3000/products/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-02-13T21:37:50.651Z",
+    "modified": "2023-02-13T21:37:50.651Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Capa do Doutor Estranho\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
