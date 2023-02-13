@@ -13,9 +13,4 @@ const allProducts = [
   }
 ];
 
-const thirdProduct = {
-  id: 3,
-  name: "Capa da invisibilidade",
-};
-
-module.exports = { allProducts, thirdProduct };
+module.exports = { allProducts };
