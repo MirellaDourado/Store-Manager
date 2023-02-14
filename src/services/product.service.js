@@ -19,8 +19,26 @@ const newProduct = async (product) => {
   return { type: null, message: response };
 };
 
+const validation = async (id) => {
+  const [result] = await productModel.findById(id);
+  if (!result) return { type: 404, message: 'Product not found' };
+
+  return { type: null, message: '' };
+};
+
+const updateProduct = async (name, id) => {
+  const verifiedProduct = await validation(id);
+
+  if (verifiedProduct.type !== null) return { type: 404, message: 'Product not found' };
+
+  const result = await productModel.update({ name, id });
+
+  return { type: null, message: result };
+};
+
 module.exports = {
   findAll,
   findById,
   newProduct,
+  updateProduct,
 };

@@ -1,6 +1,6 @@
 const express = require('express');
 const { productController } = require('../controllers'); 
-const { nameValidation } = require('../middlewares/product.middlewares');
+const { productMiddleware } = require('../middlewares');
 
 const router = express.Router();
 
@@ -8,6 +8,12 @@ router.get('/', productController.listProducts);
 
 router.get('/:id', productController.listProductsById);
 
-router.post('/', nameValidation, productController.insertProduct);
+router
+  .post('/', productMiddleware
+    .nameValidation, productMiddleware.nameLengthValidation, productController.insertProduct);
+
+router
+  .put('/:id', productMiddleware
+    .nameValidation, productMiddleware.nameLengthValidation, productController.updatingProduct);
 
 module.exports = router;
