@@ -4,9 +4,11 @@ const { productMiddleware } = require('../middlewares');
 
 const router = express.Router();
 
-router.get('/', productController.listProducts);
+router
+  .get('/', productController.listProducts);
 
-router.get('/:id', productController.listProductsById);
+router
+  .get('/:id', productController.listProductsById);
 
 router
   .post('/', productMiddleware
@@ -15,5 +17,8 @@ router
 router
   .put('/:id', productMiddleware
     .nameValidation, productMiddleware.nameLengthValidation, productController.updatingProduct);
+
+router
+  .delete('/:id', productController.removingProduct);
 
 module.exports = router;

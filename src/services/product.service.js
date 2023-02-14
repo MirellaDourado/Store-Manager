@@ -36,9 +36,20 @@ const updateProduct = async (name, id) => {
   return { type: null, message: result };
 };
 
+const removeProduct = async (id) => {
+  const verifiedProduct = await validation(id);
+
+  if (verifiedProduct.type !== null) return { type: 404, message: 'Product not found' };
+
+  await productModel.remove(id);
+
+  return { type: null, message: '' };
+};
+
 module.exports = {
   findAll,
   findById,
   newProduct,
   updateProduct,
+  removeProduct,
 };

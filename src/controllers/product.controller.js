@@ -45,9 +45,22 @@ const updatingProduct = async (req, res) => {
   }
 };
 
+const removingProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { type, message } = await productService.removeProduct(id);
+
+    if (type) return res.status(type).json({ message });
+    return res.status(204).json([]);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
 module.exports = {
   listProducts,
   listProductsById,
   insertProduct,
   updatingProduct,
+  removingProduct,
 };
