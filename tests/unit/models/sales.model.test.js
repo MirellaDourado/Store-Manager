@@ -24,7 +24,7 @@ describe('Verificando camada model de sales', function () {
   });
 
   describe('Testando o POST', function () {
-    it('Insere um novo produto', async function () {
+    it('Insere uma nova venda', async function () {
       sinon.stub(connection, 'execute').resolves(insertedSale);
       
       const product = await salesModel.registerSaleProduct({ id: 1, sales: insertedSale })
