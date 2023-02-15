@@ -34,8 +34,25 @@ const insertNewSale = async (sales) => {
   return { type: null, message: result };
 };
 
+const saleValidation = async (id) => {
+  const [result] = await salesModel.findById(id);
+  if (!result) return { type: 404, message: 'Sale not found' };
+
+  return { type: null, message: '' };
+};
+
+const removeSale = async (id) => {
+  const verify = await saleValidation(id);
+
+  if (verify.type) return verify;
+
+  await salesModel.removeSale(id);
+  return { type: null, message: [] };
+};
+
 module.exports = {
   insertNewSale,
   getAllSales,
   getSaleById,
+  removeSale,
 };

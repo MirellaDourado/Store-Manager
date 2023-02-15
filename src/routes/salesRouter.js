@@ -9,8 +9,13 @@ router.post('/',
   salesMiddleware.quantityValidation, salesMiddleware.ProductIdValidation,
   salesController.insertSales);
 
-router.get('/', salesController.getSales);
+router
+  .get('/', salesController.getSales);
 
-router.get('/:id', salesController.getSpecificSale);
+router
+  .get('/:id', salesController.getSpecificSale);
+
+router
+  .delete('/:id', salesController.deleteSale);
 
 module.exports = router;
